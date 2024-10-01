@@ -12,7 +12,10 @@ Write a program that prints a multiplication table for numbers up to 10. (use ne
 10 10 20 30 40 50 60 70 80 90 100*/
 
 for (i = 1; i < 11; i++){
+    let line = "";
     for (j = 1; j < 11; j++){
-        console.log(i*j);
+        multi = i*j;
+        line = line + multi + "\t";
     }
+    console.log(line);
 }
