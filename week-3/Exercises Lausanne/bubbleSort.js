@@ -1,4 +1,4 @@
-let myInput = [2, 3, 1, 5, 6];
+let myInput = [2, 3, 1, 5, 2, 2, 2, 5, 99, 6, 92, 88];
 let myOutput = bubbleSort(myInput);
 
 function bubbleSort(arr) {
