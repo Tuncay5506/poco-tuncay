@@ -1,1 +1,3 @@
 test1
+
+iteration 1 son yakıt = ilk yakıt - (astronot * 100)       yükseklik = 0 + 50
