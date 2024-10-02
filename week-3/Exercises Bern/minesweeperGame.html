@@ -628,21 +628,30 @@
           cells[row][col] = new Cell();
         }
       }
-      cells[0][0].isBomb = true;
+
+      //
+      // TODO: Task 1 - add some bombs at fixed positions.
+      //
+
+      /*cells[0][0].isBomb = true;
       cells[1][7].isBomb = true;
       cells[4][9].isBomb = true;
       cells[8][2].isBomb = true;
       cells[9][2].isBomb = true;
-      cells[9][9].isBomb = true;
-      //
-      // TODO: Task 1 - add some bombs at fixed positions.
-      //
+      cells[9][9].isBomb = true;*/
+
 
       //
       // TODO: Task 2 - Comment out the code of task 1. Instead of adding bombs in fixed places, add 10 of them in random places.
       //                Add a BOMBS_COUNT constant so that you can easily change the amount of bombs placed. Put it next to the
       //                other constants.
       //
+
+      const BOMBS_COUNT = 10;
+
+      for (let i = 0; i < BOMBS_COUNT; i++){
+        cells[Math.floor(Math.random() * ROWS_COUNT)][Math.floor(Math.random() * ROWS_COUNT)].isBomb = true;
+      }
 
       // Once the game has been initialized, we "render" it.
       render();
@@ -677,7 +686,19 @@
         // TODO: Task 4 - Adjacent bombs are bombs in cells touching our cell (also diagonally). Implement this function
         //                so that it returns the count of adjacent cells with bombs in them.
         //
-        return 1;
+        let counter = 0;
+        
+        for (i = -1; i < 2; i++){
+          for (j = -1; j < 2; j++){
+            if(row + i < 0 || col + j < 0 || row + i > 9 || col + j > 9){
+              continue;
+            }
+            else if(cells[row + i][col + j].isBomb){
+              counter++;
+            }
+          }
+        }
+        return counter;
       }
 
       function getBombsCount() {
