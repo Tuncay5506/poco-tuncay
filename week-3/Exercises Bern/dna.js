@@ -27,6 +27,6 @@ function countDNA(code) {
     }
   }
   console.log("A: " + a + " G: " + g + " C: " + c + " T: " + t);
-  console.log(`A: $(a) G: $(g) C: $(c) T: $(t)`);
+  console.log(`A: ${a} G: ${g} C: ${c} T: ${t}`);
 }
 countDNA(dna);
