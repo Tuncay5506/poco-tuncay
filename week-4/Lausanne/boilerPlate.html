@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,8 +7,8 @@
   </head>
   <body>
     <header>
-      <h1></h1>
-      <nav></nav>
+      <h1>Heading</h1>
+      <nav aria-label="h1">nav1</nav>
     </header>
     <main>
       <input type="password" />
@@ -28,14 +28,58 @@
       <input type="color">
       <input type="file">
       <input type="hidden">
-      <input type="image">
+      <input type="image" alt="image">
+      <p></p> 
       <form action="do_something.html" method="post">
         <label for="fname">First name:</label>    
         <input type="text" id="fname" name="fname" required>    
       </form>
+      <p></p> 
+      <form action="do_something.html" method="post">
+        <fieldset id="personal-info">
+          <legend>Personal Info</legend>
+          <label for="fname" >First name:</label>
+          <input type="text" id="fname" name="fname" required>
+          <label for="fname">Last name:</label>
+          <input type="text" id="fname" name="fname" required>
+          <label for="age" >Age:</label>
+          <input type="number" id="age" name="age" required>
+          <input type="button">
+          <input type="submit">
+          <input type="reset">
+        </fieldset>
+       </form>
+       <p></p> 
+       <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        <p>Your browser doesn't support HTML5 audio. 
+           Here is a <a href="horse.mp3">link to the audio</a> instead.</p>
+      </audio>
+      <p></p>
+      <video id="video" controls preload="metadata">
+        <source src="video/sintel-short.mp4" type="video/mp4" />
+        <source src="video/sintel-short.webm" type="video/webm" />
+        <track
+          label="English"
+          kind="subtitles"
+          srclang="en"
+          src="captions/vtt/sintel-en.vtt"
+          default />
+        <track
+          label="Deutsch"
+          kind="subtitles"
+          srclang="de"
+          src="captions/vtt/sintel-de.vtt" />
+        <track
+          label="Español"
+          kind="subtitles"
+          srclang="es"
+          src="captions/vtt/sintel-es.vtt" />
+      </video>
     </main>
     <footer>
-      <nav></nav>
+      <nav aria-label="h1"></nav>
     </footer>
   </body>
 </html>
