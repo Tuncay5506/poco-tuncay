@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my_paragraph {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p id="my_paragraph">Calculator</p>
+    <input class="calculatorNumber" id="firstNumber" type="number">
+    <input class="calculatorNumber" id="secondNumber" type="number">
+    <span> = </span>
+    <span id="result"></span>
+
+    <script>
+        /*document.getElementsByClassName(calculatorNumber).onChange(calculateSum());
+        function calculateSum(){
+            let a = document.getElementById("firstNumber").value;
+            let b = document.getElementById("secondNumber").value;
+            let result = a + b;
+            document.getElementById("result").textContent = result;
+        }*/
+
+       let resultNode = document.getElementById("result");
+       let inputA = document.getElementById("firstNumber");
+       let inputB = document.getElementById("secondNumber");
+
+       inputA.onchange = calculateSum;
+       inputB.onchange = calculateSum;
+
+       function calculateSum(){
+        let a = +inputA.value;
+        let b = +inputB.value;
+        let result = a + b;
+        resultNode.textContent = result;
+       }
+
+    </script>
+</body>
+</html>
