@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM Manipulation</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="header">Hello World</h1>
+    <p id="paragraph">This is a paragraph.</p>
+    <a id="link" href="#">This is a link</a>
 
-  <h1 id="header">Hello World</h1>
-  <p id="paragraph">This is a paragraph.</p>
-  <a id="link" href="#">This is a link</a>
+    <script>
+      const h1Element = document.getElementById("header");
+      const pElement = document.getElementById("paragraph");
+      const aElement = document.getElementById("link");
 
-  <script src="script.js"></script>
-</body>
+      for (let i = 1; i <= 2; i++) {
+        h1Element.innerHTML += " " + i;
+      }
+
+      for (let i = 1; i <= 4; i++) {
+        pElement.innerHTML = i + " " + pElement.innerHTML;
+      }
+
+      for (let i = 1; i <= 7; i++) {
+        aElement.innerHTML = i;
+      }
+    </script>
+  </body>
 </html>
