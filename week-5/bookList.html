@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Book List</title>
+  </head>
+  <body>
+    <h1>My Book List</h1>
+    <ul id="book-list"></ul>
+
+    <script>
+      // Define your book array here
+      var books = [
+        {
+          title: "The Design of EveryDay Things",
+          author: "Don Norman",
+          alreadyRead: false,
+          cover: "https://images.thalia.media/-/BF2000-2000/00cca5aceec447a4837e483935f52d1e/the-design-of-everyday-things-taschenbuch-don-norman-englisch.jpeg",
+        },
+        {
+          title: "The Most Human Human",
+          author: "Brian Christian",
+          alreadyRead: true,
+          cover: "https://m.media-amazon.com/images/I/91K6rlSmJXL._AC_UF894,1000_QL80_.jpg",
+        },
+      ];
+
+      const booklist = document.getElementById("book-list");
+
+      for (i = 0; i <= books.length; i++) {
+        const bookDetails = document.createElement("p");
+        bookDetails.textContent = `${books[i].title}`;
+
+        const bookCover = document.createElement("img");
+        bookCover.src = books[i].cover;
+
+        booklist.appendChild(bookDetails);
+        booklist.appendChild(bookCover);
+      }
+    </script>
+  </body>
+</html>

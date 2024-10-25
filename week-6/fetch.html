@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+<script>
+
+fetch ("https://powercoder-form-backend.onrender.com/messages-json")
+.then(x => x.text())
+.then(text => showMessage(JSON.parse(text).messages));
+
+let demoMessages = document.getElementById("demo");
+
+function showMessage(messagesArray){
+    for (const element of messagesArray){
+        demoMessages.innerHTML += `<strong>${element.sender}</strong> = ${element.text} <br>`;
+        console.log(element);
+    }
+}
+
+</script>
+</body>
+</html>

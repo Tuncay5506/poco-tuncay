@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let books = [
+            {
+                title: "book1",
+                author: "author1",
+                alreadyRead: true,
+            },
+            {
+                title: "book2",
+                author: "author2",
+                alreadyRead: true,
+            },
+            {
+                title: "book3",
+                author: "author3",
+                alreadyRead: true,
+            },
+            {
+                title: "book4",
+                author: "author4",
+                alreadyRead: true,
+            }
+        ];
+        
+        let jsonString = JSON.stringify(books);
+        console.log(jsonString);
+        localStorage.setItem("books", jsonString);
+    </script>
+</body>
+</html>
