@@ -42,7 +42,15 @@ nav {
     right: 20px;
 }
 
-.language, .sign-in-btn {
+.language {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+    background: transparent;
+}
+
+.sign-in-btn {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
